@@ -1,5 +1,6 @@
+// eslint-disable-next-line no-constant-condition
 if ("0") {
-  alert( 'Hello' );
+  alert( "Hello" );
 }
 
 // alert WILL be shown, because a non-empty string evaluates to 1;

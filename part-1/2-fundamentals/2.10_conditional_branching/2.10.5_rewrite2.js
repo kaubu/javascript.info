@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // // Code to rewrite
 // let message;
 
@@ -12,9 +13,10 @@
 // }
 
 // Rewritten code
+// eslint-disable-next-line no-unused-vars, no-undef
 let message = (login == "Employee") ? "Hello" :
-    (login == "Director") ? "Greetings" :
+  (login == "Director") ? "Greetings" :
     (login == "") ? "No login" :
-    "";
+      "";
 
 // correct

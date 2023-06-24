@@ -1,5 +1,4 @@
 // npm install prompt-sync
-const prompt = require("prompt-sync")();
 const alert = console.log;
 
 /*
@@ -101,9 +100,9 @@ Use the for loop to output even numbers from 2 to 10.
 */
 
 for (let i = 2; i <= 10; i++) {
-    if (i % 2 == 0) {
-        alert(i);
-    }
+  if (i % 2 == 0) {
+    alert(i);
+  }
 }
 
 // Working
@@ -127,8 +126,8 @@ it will output: "number 0!" 1, 2
 
 let i = 0;
 while (i < 3) {
-    alert(`number ${i}!`);
-    i++;
+  alert(`number ${i}!`);
+  i++;
 }
 
 // working and correct
@@ -149,24 +148,25 @@ Here we can assume that the visitor only inputs numbers. There’s no need to
 implement a special handling for a non-numeric input in this task.
 */
 
+// eslint-disable-next-line no-constant-condition
 while (true) {
-    // let num = +prompt("Put a number greater than 100: ");
-    let num = 125;  // put this here for convenience, so testing the script
-                    // wouldn't wait for human input
+  // let num = +prompt("Put a number greater than 100: ");
+  let num = 125;  // put this here for convenience, so testing the script
+  // wouldn't wait for human input
 
-    if (num <= 100) continue;
-    else if (num === null || num == "") break;
-    else break;
+  if (num <= 100) continue;
+  else if (num === null || num == "") break;
+  else break;
 }
 
 // working, but not exactly correct
 // the official solution uses a do while loop… makes sense
 // Here it is:
-    // let num;
+// let num;
 
-    // do {
-    //   num = prompt("Enter a number greater than 100?", 0);
-    // } while (num <= 100 && num);
+// do {
+//   num = prompt("Enter a number greater than 100?", 0);
+// } while (num <= 100 && num);
 // 
 
 
@@ -197,18 +197,18 @@ alert("[Primes]");
 let n = 99;
 
 outer: for (let i = 2; i <= n; i++) {
-    // i = 2–10
+  // i = 2–10
 
-    // check if i is a prime
-    // counts down from one below i (because it will be divisible by itself) 
-    // and checks if there are any divisions
-    // if there are any, then continue to outer
-    // if there aren't, print it out
-    for (let x = i - 1; x >= 2; x--) {
-        if (i % x == 0) continue outer;
-    }
+  // check if i is a prime
+  // counts down from one below i (because it will be divisible by itself) 
+  // and checks if there are any divisions
+  // if there are any, then continue to outer
+  // if there aren't, print it out
+  for (let x = i - 1; x >= 2; x--) {
+    if (i % x == 0) continue outer;
+  }
 
-    alert(i);
+  alert(i);
 }
 
 // it is WORKING!

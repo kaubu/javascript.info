@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 let a = 1, b = 1;
 
 let c = ++a; // 2
