@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+    Rewrite with arrow functions
+
+    Replace Function Expressions with arrow functions in the code below:
+
+      function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+      }
+
+      ask(
+        "Do you agree?",
+        function() { alert("You agreed."); },
+        function() { alert("You canceled the execution."); }
+      );
+    */
+
+    let ask = (question, yes, no) => confirm(question) ? yes() : no();
+
+    ask(
+      "Do you agree?",
+      function() { alert("You agreed."); },
+      function() { alert("You canceled the execution."); }
+    );
+
+    // Oh rip lmao, it *works*, however it wasn't meant to work that way. I was
+    // supposed to rewrite the ask() usage, not the declaration. Ah, well.
+
+    // Here's the real answer:
+
+    /* 
+      function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+      }
+
+      ask(
+        "Do you agree?",
+        () => alert("You agreed."),
+        () => alert("You canceled the execution.")
+      );
+    */
+
+    // Seems a lot nicer on the eyes, too.
+  </script>
+</body>
+</html>
